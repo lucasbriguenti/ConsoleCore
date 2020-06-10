@@ -32,6 +32,8 @@ namespace ProAgil.WebAPI.Migrations
 
                     b.Property<string>("Tema");
 
+                    b.Property<string>("ImgUrl");
+
                     b.HasKey("EventoId");
 
                     b.ToTable("Eventos");
