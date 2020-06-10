@@ -4597,6 +4597,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "ProAgil.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ProAgil.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProAgil.Dominio.dll": {}
+        }
+      },
+      "ProAgil.Repositorio/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "ProAgil.Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProAgil.Repositorio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProAgil.Repositorio.dll": {}
+        }
       }
     }
   },
@@ -12416,6 +12439,16 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "ProAgil.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../ProAgil.Dominio/ProAgil.Dominio.csproj",
+      "msbuildProject": "../ProAgil.Dominio/ProAgil.Dominio.csproj"
+    },
+    "ProAgil.Repositorio/1.0.0": {
+      "type": "project",
+      "path": "../ProAgil.Repositorio/ProAgil.Repositorio.csproj",
+      "msbuildProject": "../ProAgil.Repositorio/ProAgil.Repositorio.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12423,7 +12456,9 @@
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 2.2.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "ProAgil.Dominio >= 1.0.0",
+      "ProAgil.Repositorio >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12456,7 +12491,14 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\lucas.briguenti\\Desktop\\dotnetcore\\ProAgil.Dominio\\ProAgil.Dominio.csproj": {
+              "projectPath": "C:\\Users\\lucas.briguenti\\Desktop\\dotnetcore\\ProAgil.Dominio\\ProAgil.Dominio.csproj"
+            },
+            "C:\\Users\\lucas.briguenti\\Desktop\\dotnetcore\\ProAgil.Repositorio\\ProAgil.Repositorio.csproj": {
+              "projectPath": "C:\\Users\\lucas.briguenti\\Desktop\\dotnetcore\\ProAgil.Repositorio\\ProAgil.Repositorio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
