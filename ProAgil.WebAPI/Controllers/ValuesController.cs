@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProAgil.WebAPI.Data;
-using ProAgil.WebAPI.Model;
+using ProAgil.Repositorio;
 
 namespace ProAgil.WebAPI.Controllers
 {
@@ -14,8 +13,8 @@ namespace ProAgil.WebAPI.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        public DataContext _contexto { get; }
-        public ValuesController(DataContext contexto)
+        public ProAgilContext _contexto { get; }
+        public ValuesController(ProAgilContext contexto)
         {
             _contexto = contexto;
 
@@ -42,7 +41,7 @@ namespace ProAgil.WebAPI.Controllers
         {
             try
             {
-                var result = await _contexto.Eventos.FirstOrDefaultAsync(x => x.EventoId == id);
+                var result = await _contexto.Eventos.FirstOrDefaultAsync(x => x.Id == id);
                 return Ok(result);
             }
             catch (System.Exception)

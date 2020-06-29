@@ -374,6 +374,8 @@
       },
       "ProAgil.Repositorio/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "2.2.0",
           "ProAgil.Dominio": "1.0.0"
         },
         "runtime": {
